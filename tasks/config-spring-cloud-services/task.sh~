@@ -39,8 +39,8 @@ PRODUCT_PROPERTIES=$(
 PRODUCT_NETWORK=$(
   echo "{}" |
   $JQ_CMD -n \
-    --arg singleton_jobs_az "$SINGLETON_JOBS_AZ" \
-    --arg other_azs "$OTHER_AZS" \
+#    --arg singleton_jobs_az "$SINGLETON_JOBS_AZ" \
+#    --arg other_azs "$OTHER_AZS" \
     --arg network_name "$NETWORK_NAME" \
     '. +
     {
