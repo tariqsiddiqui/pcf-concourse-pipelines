@@ -43,10 +43,8 @@ PRODUCT_NETWORK=$(
 #    --arg other_azs "$OTHER_AZS" \
     --arg network_name "$NETWORK_NAME" \
     '. +
-    {
-#      "singleton_availability_zone": {
-#        "name": $singleton_jobs_az
-#      },
+    { 
+#      "singleton_availability_zone": { "name": $singleton_jobs_az },
 #      "other_availability_zones": ($other_azs | split(",") | map({name: .})),
       "network": {
         "name": $network_name
@@ -55,6 +53,6 @@ PRODUCT_NETWORK=$(
     '
 )
 
-
-
+echo "Testing"
+echo $PRODUCT_NETWORK
 $OM_CMD -t https://$OPS_MGR_HOST -u $OPS_MGR_USR -p $OPS_MGR_PWD -k configure-product -n $PRODUCT_IDENTIFIER -pn "$PRODUCT_NETWORK" -p "$PRODUCT_PROPERTIES"
