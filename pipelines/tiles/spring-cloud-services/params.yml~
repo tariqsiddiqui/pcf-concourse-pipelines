@@ -1,6 +1,6 @@
 pivnet_token: pGfuXpVzp8RB3d6wDsmp # [R] PivNet Access Token
 github_token: 5bd2aa21a3f29f8021e9702d1e2b19f295896c1e # [R] Your github token
-github_repo: https://github.com/tariqsiddiqui/pcf-concourse-pipeline # [R] Pipelines github repo
+github_repo: https://github.com/tariqsiddiqui/pcf-concourse-pipelines # [R] Pipelines github repo
 github_branch: master
 github_username: tariqsiddiqui # [R] Your github username
 
