@@ -1,23 +1,25 @@
-pivnet_token: pGfuXpVzp8RB3d6wDsmp # [R] PivNet Access Token
-github_token: 5bd2aa21a3f29f8021e9702d1e2b19f295896c1e # [R] Your github token
+pivnet_token: # [R] PivNet Access Token
+github_token: # [R] Your github token
 github_repo: https://github.com/rahul-kj/concourse-vsphere # [R] Pipelines github repo
 github_branch: master
-github_username: tariqsiddiqui # [R] Your github username
+github_username: # [R] Your github username
 
 company_proxy_domain: # [O] proxy domain
-iaas_type: azure
+iaas_type: vsphere
 
 ## Ops Manager installation meta data
-ops_mgr_ip: 104.209.37.159 # [O] Ops Manager IP if behind proxy
-ops_mgr_host: opsman.cpazureref.ecsteam.io # [R] Ops Manager FQDN, ex: opsmgr.example.com
-ops_mgr_usr: admin # [R] Ops Manager admin user
-ops_mgr_pwd: welcome1 # [R] Ops Manager admin password
+ops_mgr_ip: # [O] Ops Manager IP if behind proxy
+ops_mgr_host: # [R] Ops Manager FQDN, ex: opsmgr.example.com
+ops_mgr_usr: # [R] Ops Manager admin user
+ops_mgr_pwd: # [R] Ops Manager admin password
 
 product_name: p-spring-cloud-services # Product slug from pivnet
 product_identifier: p-spring-cloud-services # Product identifier from OpsManager using om cli
 product_version: ^1\.4\..*$
 
-network_name: service  # [R] Tile network name
+singleton_jobs_az: # [R] Place singleton jobs in an AZ
+other_azs: # [R] Balance other jobs in AZ's
+network_name: # [R] Tile network name
 
 broken_max_instances: 100
 buildpack_name: ""
