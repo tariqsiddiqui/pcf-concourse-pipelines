@@ -39,9 +39,15 @@ PRODUCT_PROPERTIES=$(
 PRODUCT_NETWORK=$(
   echo "{}" |
   $JQ_CMD -n \
+    --arg singleton_jobs_az "$SINGLETON_JOBS_AZ" \
+    --arg other_azs "$OTHER_AZS" \
     --arg network_name "$NETWORK_NAME" \
     '. +
-    { 
+    {
+      "singleton_availability_zone": {
+        "name": $singleton_jobs_az
+      },
+      "other_availability_zones": ($other_azs | split(",") | map({name: .})),
       "network": {
         "name": $network_name
       }
