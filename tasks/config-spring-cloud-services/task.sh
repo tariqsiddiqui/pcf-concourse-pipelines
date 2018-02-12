@@ -44,12 +44,17 @@ PRODUCT_NETWORK=$(
     --arg network_name "$NETWORK_NAME" \
     '. +
     {
+      "singleton_availability_zone": {
+        "name": $singleton_jobs_az
+      },
+      "other_availability_zones": ($other_azs | split(",") | map({name: .})),
       "network": {
         "name": $network_name
       }
     }
     '
 )
+
 
 echo "Testing"
 echo $PRODUCT_NETWORK
